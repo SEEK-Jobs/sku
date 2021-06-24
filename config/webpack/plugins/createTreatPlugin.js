@@ -17,7 +17,6 @@ const braidThemes = [
 module.exports = ({
   target,
   isProductionBuild,
-  include,
   libraryName,
   supportedBrowsers,
   MiniCssExtractPlugin,
@@ -47,10 +46,6 @@ module.exports = ({
   const themeIdentName = isProductionBuild ? prodThemeIdent : devThemeIdent;
 
   return new TreatPlugin({
-    test: {
-      test: /\.treat\.ts$/,
-      include,
-    },
     outputCSS: target === 'browser',
     outputLoaders: [
       {

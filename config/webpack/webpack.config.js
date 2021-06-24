@@ -273,6 +273,7 @@ const makeWebpackConfig = ({
         nodeExternals({
           whitelist: [
             'classnames', // Workaround for https://github.com/JedWatson/classnames/issues/240
+            /^(braid-design-system)/,
 
             // webpack-node-externals compares the `import` or `require` expression to this list,
             // not the package name, so we map each packageName to a pattern. This ensures it
